@@ -1,18 +1,8 @@
 <?php
 
-// error_reporting(1);
+error_reporting(1);
 $role = $_GET['role'];
 $bag = $_GET['bag'];
-
-/* lama
-// pake controller
-$control = $role;
-$controller = "aksi/ctrl/".$control;
-$fungsi = $_GET['bag'];
-include $controller.'.php';
-$$control->$fungsi();
-*/
-
 
 if($role == "" and $bag == "") {
 	include 'index.php';
