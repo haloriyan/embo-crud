@@ -1,0 +1,42 @@
+.atas {
+	position: absolute;
+	top: 0px;left: 0px;right: 0px;
+	line-height: 65px;
+}
+.atas .judul {
+	margin: 0;
+	float: left;
+	margin-left: 5%;
+	font-size: 22px;
+	font-family: OBold;
+}
+
+.container {
+	position: absolute;
+	top: 65px;left: 0px;right: 0px;
+	color: #454545;
+}
+.myCtrl {
+	height: 65px;
+	border-bottom: 1px solid #ccc;
+}
+.container a { color: #454545; }
+#listCtrl,#listPage { margin-top: 35px; }
+#xCtrl {
+	background: none;
+	border: none;
+	font-size: 20px;
+	color: #cb0023;
+	margin-top: 20px;
+}
+
+.popup .box {
+	border: none;
+	border-radius: 0px;
+	font-size: 17px;
+	border-bottom: 1px solid #ccc;
+	padding: 0px;
+	width: 100%;
+}
+.popup .box:focus { border-bottom: 1px solid #cb0023; }
+.bag-tombol button { font-size: 17px; }

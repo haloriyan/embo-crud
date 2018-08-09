@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteRule ^(aksi|database)($|/) - [L]
+RewriteRule ^error/(.*?)$ pages/error/$1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([^/]+)$ routes.php?bag=$1 [L]
+RewriteRule ^([^/]+)/([^/]+)$ routes.php?role=$1&bag=$2 [L]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)$ routes.php?role=$1&bag=$2&function=$3 [L]

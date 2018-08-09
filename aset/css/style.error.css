@@ -1,0 +1,29 @@
+body {
+	background-color: #e74c3c;
+	color: #fff;
+}
+.container {
+	position: absolute;
+	left: 10%;top: 16%;
+}
+.container h1 {
+	font-size: 60px;
+}
+.container p {
+	font-size: 25px;
+	font-family: OLight;
+}
+.container button {
+	width: 260px;
+	height: 57px;
+	margin-top: 25px;
+	cursor: pointer;
+	background-color: #fff;
+	color: #e74c3c;
+	border: none;
+	font-size: 25px;
+	transition: 0.4s;
+}
+.container button:hover {
+	background-color: #ecf0f1;
+}

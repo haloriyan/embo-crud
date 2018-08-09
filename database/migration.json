@@ -1,0 +1,19 @@
+{
+	"tabel": {
+		"user": [
+			"iduser int(11)",
+			"username varchar(50)",
+			"password varchar(50)",
+			"registered int(11)"
+		]
+	},
+	"atribut": {
+		"primary key": [
+			"user.iduser"
+		],
+		"unique key": [
+			"user.username"
+		]
+		
+	}
+}
