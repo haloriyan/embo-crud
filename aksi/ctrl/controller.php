@@ -1,18 +1,39 @@
 <?php
-error_reporting(1);
+
+/*
+	* EMBO JS-PHP FRAMEWORK
+	* Created by Riyan Satria. Yeah.. just me...
+	* (C) 2018
+*/
+
+// error_reporting(1);
 $inc = include 'database/config.php';
 if(!$inc) {
 	include '../../database/config.php';
+}
+
+function lihat($param) {
+	if(!file_exists('./pages/'.$param.'.php')) {
+		include './pages/error/404.php';
+	}else {
+		include './pages/'.$param.".php";
+	}
 }
 
 class controller {
 	public function __construct() {
 		$this->koneksi();
 	}
+	
 	public function koneksi() {
+		/* You can edit this on /database/config.php */
 		global $dbHost,$dbUsername,$dbPassword,$dbName;
 		$this->konek = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 	}
+	
+	/*
+		This is a query builder. For usage, check the documentation
+	*/
 	public function tabel($tbl) {
 		global $tabel;
 		$tabel = $tbl;
@@ -161,13 +182,11 @@ class ".$name." extends controller {
 $".$name." = new ".$name."();
 
 ?>";
-		mkdir("../".$name);
 		fwrite($file, $y);
 		fclose($file);
 	}
 	public function remove($name) {
 		$del = unlink("../ctrl/".$name.".php");
-		$y = rmdir("../".$name."/");
 		return $del;
 	}
 
@@ -210,6 +229,14 @@ $".$name." = new ".$name."();
 		$del = unlink("../../pages/".$name.".php");
 		$css = unlink("../../aset/css/style.".$name.".css");
 		$js = unlink("../../aset/js/script.".$name.".js");
+	}
+
+	// gapenting
+	public function pos($param) {
+		return @$_POST[$param];
+	}
+	public function dapat($param) {
+		return $_GET[$param];
 	}
 }
 

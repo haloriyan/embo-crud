@@ -9,6 +9,9 @@ class user extends controller {
 		$name = $_POST['name'];
 		$this->tabel("hotel")->tambah(["nama" => $name])->eksekusi();
 	}
+	public function hello() {
+		return lihat('register');
+	}
 }
 
 $user = new user();
