@@ -26,4 +26,4 @@ Control all your process with controller that can be created by accessing `http:
 You can create a simple page by accessing `http://yoursite.com/page` and fill the form. Generated page will be located on `pages` directory. And the assets will placed on `aset/css/style.namePage.css` for the CSS and `aset/js/script.namePage.js` for the Javascript. You can access your generated page on `http://yoursite.com/namePage`
 
 ## Migrating Database
-Build your table before migrating database via `/database/migration.json`.
+Build your table before migrating database via `/database/migration.json`. For guidance, you can see [DB Generator](https://github.com/haloriyan/db-generator "DB Generator") about editing `migration.json`. If you done setting up the table, run `https://yoursite.com/migrate` to migrating your database.
