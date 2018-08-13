@@ -2,8 +2,8 @@
 	"tabel": {
 		"user": [
 			"iduser int(11)",
-			"username varchar(50)",
-			"password varchar(50)",
+			"name varchar(50)",
+			"address varchar(150)",
 			"registered int(11)"
 		]
 	},
